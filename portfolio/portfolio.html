@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <section id="home">
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+            <div class="quotation">
+                <h1>Welcome to My Portfolio</h2>
+                <h3 class="name">Hi, <br>I'm Srinivas</h3>
+                <p class="briefnote">
+                    A computer science student with a passion for web development.
+               
+                    I love creating beautiful and functional websites that make a positive impact.
+                    Explore my portfolio to see some of my skills! </p>
+            </div>
+            
+        
+    </section>
+
+    <section id="about">
+        
+        <h2>About</h2>
+        <img src="about1.jpg" class="about_image" alt="computers">
+        <p>I'm a computer science student specializing in web development. From a young age, I've been fascinated by technology and its potential to shape the world. This passion led me to pursue a career in web development, where I enjoy combining creativity with problem-solving to build engaging and user-friendly websites.</p>
+        <p>Throughout my academic journey, I've gained proficiency in HTML, CSS, JavaScript, and various web development frameworks. I'm constantly seeking to expand my skills and stay updated with the latest technologies in the rapidly evolving field of web development.</p>
+        <p>Aside from coding, I enjoy spending my free time exploring new technologies, participating in hackathons, and contributing to open-source projects. I believe in the power of collaboration and continuous learning to drive innovation and make a positive impact in the tech community.</p>
+    </section>
+
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <img src="skill1.jpeg" alt="HTML Logo">
+            <div class="skill-details">
+                <h3>HTML</h3>
+                <p>HTML is the standard markup language for creating web pages and web applications.</p>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <img src="skill2.jpg" alt="CSS Logo" class="image2">
+            <div class="skill-details">
+                <h3>CSS</h3>
+                <p>CSS is a style sheet language used for describing the presentation of a document written in HTML.</p>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <img src="skill3.png" alt="JavaScript Logo">
+            <div class="skill-details">
+                <h3>JavaScript</h3>
+                <p>JavaScript is a high-level programming language that is used to create interactive effects within web browsers.</p>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <img src="skill4.jpg" alt="JavaScript Logo">
+            <div class="skill-details">
+                <h3>Python</h3>
+                <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <button id="downloadButton"><img src="download.webp" alt="download button"><br>Download resume</button>
+        <div id="downloadAnimation" class="download-animation hide"></div>
+        <a href="resume.pdf" id="resumeLink" download="resume.pdf" class="hide" title="RESUME"></a>
+    </section>
+
+     <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-icons">
+            <li>
+                <a href="#" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">21pa1a5702@vishnu.edu.in</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Phone">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">+91 95503 11675</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-details">linkedin.com/in/durgasrinivasalamanda</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <div class="contact-details">instagram.com/a_d_srinivas</div>
+                </a>
+            </li>
+            <li>
+               
+            </li>
+        </ul>
+    </section>
+
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            var downloadButton = document.getElementById('downloadButton');
+            var downloadAnimation = document.getElementById('downloadAnimation');
+            var resumeLink = document.getElementById('resumeLink');
+            
+            downloadButton.style.display = 'none';
+            downloadAnimation.style.display = 'block';
+            
+            setTimeout(function() {
+                downloadAnimation.style.display = 'none';
+                resumeLink.click();
+                downloadButton.style.display = 'block';
+            }, 2000); 
+        });
+    </script>
+</body>
+</html>
