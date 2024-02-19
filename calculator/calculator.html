@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background-image: url(calci_background.jpg);
+        }
+    
+        .calculator {
+            background-color: #886a6a;
+            margin: auto;
+            padding: 20px;
+            max-width:400px; 
+            border-radius: 15px;
+        }
+        .calculator input[type=text] {
+        width: 100%;
+        padding: 10px 0px 10px 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        text-align: right;
+    }
+        .calculator .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .calculator .row button {
+        flex: 1;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50px;
+        transition: background-color 0.1s;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .calculator {
+            max-width: 100%;
+        }
+        
+        .calculator input[type=text] {
+            font-size: 16px;
+        }
+        
+        .calculator .row button {
+            font-size: 14px;
+        }
+    }
+      
+    
+        .calculator button:focus {
+            background-color: rgb(68, 213, 242);
+            color: black;
+        }
+    
+        .calculator button:hover {
+            background-color: rgb(222, 200, 200);
+            box-shadow:3px  3px rgb(75, 84, 76);
+        } 
+    
+        h1{
+            text-align: center ;
+            border: 2px solid black;
+        }
+    
+    </style>s
+    
+</head>
+<body>
+<h1>CALCULATOR</h1>
+    
+    <div class="calculator">
+        <input type="text" id="display" readonly title="text">
+        <div class="row">
+        <button onclick="typer('%')" >%</button>
+        <button onclick="clear1()" >CE</button>
+        <button onclick="clear1()">C</button>
+        <button onclick="typer('/')">/</button>
+    </div>
+    <div class="row">
+        <button onclick="typer('7')">7</button>
+        <button onclick="typer('8')">8</button>
+        <button onclick="typer('9')">9</button>
+        <button onclick="typer('*')">*</button>
+    </div>
+    <div class="row">
+        <button onclick="typer('4')">4</button>
+        <button onclick="typer('5')">5</button>
+        <button onclick="typer('6')">6</button>
+        <button onclick="typer('-')">-</button>
+    </div>
+    <div class="row">
+        <button onclick="typer('1')">1</button>
+        <button onclick="typer('2')">2</button>
+        <button onclick="typer('3')">3</button>
+        <button onclick="typer('+')">+</button>
+    </div>
+    <div class="row">
+        <button onclick="clear1()">del</button>
+        <button onclick="typer('0')">0</button>
+        <button onclick="typer('.')">.</button>
+        <button onclick="evaluate1()">=</button>
+    </div>
+</div>
+    <script>
+        function typer(input) {
+            document.getElementById('display').value += input;
+    }
+        
+
+        function clear1() {
+            document.getElementById('display').value = '';
+        }
+
+        function evaluate1() {
+            try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch(error) {
+            document.getElementById('display').value = 'Error';
+        }
+        }
+    </script>
+</body>
+</html>
